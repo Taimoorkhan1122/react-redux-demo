@@ -8,5 +8,5 @@ test("renders CakeCount Component", () => {
   expect(headiingElement).toBeInTheDocument();
 
   const countButton = screen.getByRole("button");
-  expect(countButton.innerHTML).toContain("Update count");
+  expect(countButton.innerHTML).toContain("buy cake");
 });
