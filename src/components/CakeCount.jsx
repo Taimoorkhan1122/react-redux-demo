@@ -1,12 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
-import { buyCake } from ".././store";
+import { buyCake, stockCake } from ".././store";
 
 const CakeCount = (props) => {
   return (
     <div data-testid="cake-count">
-      <h2>Cake Counts - {props.noOfCakes}</h2>
+      <h1>Welcom to my Cake store</h1>
+      <h3>Cake Counts - {props.noOfCakes}</h3>
     <button onClick={props.buyCake}>buy cake</button>
+    <button onClick={props.stockCake}>stock cake</button>
     </div>
   );
 };
@@ -17,9 +19,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dipatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    buyCake: () => dipatch(buyCake()),
+    buyCake: () => dispatch(buyCake()),
+    stockCake: () => dispatch(stockCake()),
   };
 };
 
